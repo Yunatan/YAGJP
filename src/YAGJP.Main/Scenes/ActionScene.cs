@@ -18,7 +18,7 @@ namespace YAGJP.Main
 
 
             // The path to the level to be loaded.
-            var pathLevel = @"Resources\Levels\testLVL.oel";
+            var pathLevel = @"lvl1_sized.oel";
             // The path to the Ogmo Project to use when loading the level.
             var pathProject = @"levels.oep";
 
@@ -26,17 +26,16 @@ namespace YAGJP.Main
             proj = new OgmoProject(pathProject);
 
             //Ensure that the grid layer named "Solids" gets the Solid collision tag when loading.
-            //proj.RegisterTag(Tags.Solid, "Walls");
-            //proj.RegisterTag(Tags.Solid, "Walls_1");
-            //proj.RegisterTag(Tags.Solid, "Walls_2");
+            proj.RegisterTag(Tags.Solid, "grid_1");
+            proj.RegisterTag(Tags.Solid, "grid_2");
 
             // Load the level into the Scene.
             proj.LoadLevelFromFile(pathLevel, this);
 
-            var player = new Player(1500, 1500);
+            var player = new Player(600, 600);
             this.Add(player);
 
-            var obj = new Entity(1500, 1500, Image.CreateRectangle(32, 32, Color.Blue));
+            var obj = new Entity(600, 600, Image.CreateRectangle(32, 32, Color.Blue));
             this.Add(obj);
         }
 

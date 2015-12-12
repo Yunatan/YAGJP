@@ -10,15 +10,15 @@ namespace YAGJP.Main.Entities
     class Player : Entity
     {
         BoxCollider collider = new BoxCollider(32, 32, Tags.Player);
-        Image img = Image.CreateRectangle(32, 32, Color.Red);
+        Image img = new Image(@"Resources\Levels\gg2.png");
 
         public Player(float x, float y) : base(x, y)
         {
             AddGraphic(img);
             img.CenterOrigin();
-           // SetHitbox(32, 32, Tags.Player);
-           //AddCollider(collider);
-           //collider.CenterOrigin();
+            SetHitbox(32, 32, Tags.Player);
+           AddCollider(collider);
+           collider.CenterOrigin();
         }
 
         public float MoveSpeed = 5;
@@ -52,6 +52,10 @@ namespace YAGJP.Main.Entities
             {
                 // Move left by the move speed.
                 X -= MoveSpeed;
+                if (Hitbox.Collide(X, Y, Tags.Solid) != null)
+                {
+                    X += MoveSpeed;
+                }
             }
             // If the D key is down,
             if (Input.KeyDown(Key.D))

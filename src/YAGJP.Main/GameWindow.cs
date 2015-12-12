@@ -10,14 +10,14 @@ namespace YAGJP.Main
     class GameWindow : Game
     {
         const string windowTitle = "YAGJP";
-        const int width = 1024;
-        const int height = 768;
+        const int width = 1600;
+        const int height = 800;
 
         internal GameWindow() : base(windowTitle, width, height)
         {
-            WindowResize = false;
+         //   WindowResize = false;
             MouseVisible = true;
-            Color = Color.Black;
+            Color = Color.Gray;
         }
         
     }
