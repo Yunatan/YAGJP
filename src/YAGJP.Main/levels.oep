@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <OgmoVersion>2.1.0.6</OgmoVersion>
+  <OgmoVersion>1.0</OgmoVersion>
   <Name>levels</Name>
   <BackgroundColor A="255" R="63" G="63" B="63" />
   <GridColor A="255" R="212" G="212" B="212" />
@@ -16,7 +16,7 @@
     <Width>10000</Width>
     <Height>10000</Height>
   </LevelMaximumSize>
-  <Filename>C:\Users\Vlad\Documents\Visual Studio 2015\Projects\YAGJP\src\YAGJP.Main\levels.oep</Filename>
+  <Filename>E:\LUDUM_OFF\YAGJP\src\YAGJP.Main\levels.oep</Filename>
   <AngleMode>Radians</AngleMode>
   <CameraEnabled>false</CameraEnabled>
   <CameraSize>
