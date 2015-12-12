@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <OgmoVersion>2.1.0.6</OgmoVersion>
+  <OgmoVersion>1.0</OgmoVersion>
   <Name>levels</Name>
   <BackgroundColor A="255" R="63" G="63" B="63" />
   <GridColor A="255" R="212" G="212" B="212" />
@@ -66,8 +66,8 @@
     <LayerDefinition xsi:type="TileLayerDefinition">
       <Name>walls_1</Name>
       <Grid>
-        <Width>32</Width>
-        <Height>32</Height>
+        <Width>16</Width>
+        <Height>16</Height>
       </Grid>
       <ScrollFactor>
         <X>1</X>
@@ -78,8 +78,8 @@
     <LayerDefinition xsi:type="TileLayerDefinition">
       <Name>walls_2</Name>
       <Grid>
-        <Width>32</Width>
-        <Height>32</Height>
+        <Width>16</Width>
+        <Height>16</Height>
       </Grid>
       <ScrollFactor>
         <X>1</X>
