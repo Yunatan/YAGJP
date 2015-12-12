@@ -18,5 +18,6 @@ namespace YAGJP.Main
             WindowResize = false;
             Color = Color.Black;
         }
+        
     }
 }

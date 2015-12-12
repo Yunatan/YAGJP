@@ -8,7 +8,6 @@ namespace YAGJP.Main
         {
             var game = new GameWindow();
             game.FirstScene = new ActionScene();
-            // Set the background color to see stuff a little better.
             game.Start();
         }
     }

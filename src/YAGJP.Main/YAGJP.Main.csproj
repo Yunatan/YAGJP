@@ -51,11 +51,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\App.config" />
-    <None Include="Resources\Levels\levels.oep">
+    <None Include="levels.oep">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\App.config" />
     <None Include="Resources\Levels\lvl1.oel">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
