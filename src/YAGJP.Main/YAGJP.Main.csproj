@@ -62,6 +62,9 @@
     <None Include="Resources\Levels\lvl1_new.oel">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Resources\Levels\testLVL.oel">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Otter\Otter.csproj">

@@ -8,6 +8,7 @@ namespace YAGJP.Main
         {
             var game = new GameWindow();
             game.FirstScene = new ActionScene();
+            game.FirstScene.CameraZoom = 2;
             game.Start();
         }
     }
