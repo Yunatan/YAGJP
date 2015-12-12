@@ -20,10 +20,10 @@
   <AngleMode>Radians</AngleMode>
   <CameraEnabled>true</CameraEnabled>
   <CameraSize>
-    <Width>1200</Width>
-    <Height>1200</Height>
+    <Width>600</Width>
+    <Height>600</Height>
   </CameraSize>
-  <ExportCameraPosition>true</ExportCameraPosition>
+  <ExportCameraPosition>false</ExportCameraPosition>
   <LevelValueDefinitions />
   <LayerDefinitions>
     <LayerDefinition xsi:type="GridLayerDefinition">
