@@ -12,11 +12,11 @@ namespace Otter {
     /// </summary>
     public class OgmoProject {
 
-        #region Private Fields
+        #region protected Fields
 
-        Dictionary<string, int> ColliderTags = new Dictionary<string, int>();
-        Dictionary<string, string> valueTypes = new Dictionary<string, string>();
-        Dictionary<string, string> assetMappings = new Dictionary<string, string>();
+        protected Dictionary<string, int> ColliderTags = new Dictionary<string, int>();
+        protected Dictionary<string, string> valueTypes = new Dictionary<string, string>();
+        protected Dictionary<string, string> assetMappings = new Dictionary<string, string>();
 
         #endregion
 
@@ -90,7 +90,7 @@ namespace Otter {
         /// <summary>
         /// The level data last loaded with LoadLevel()
         /// </summary>
-        public string CurrentLevel { get; private set; }
+        public string CurrentLevel { get; protected set; }
 
         #endregion
 
@@ -140,9 +140,9 @@ namespace Otter {
 
         #endregion
 
-        #region Private Methods
+        #region protected Methods
 
-        void CreateEntity(XmlElement e, Scene scene) {
+        protected void CreateEntity(XmlElement e, Scene scene) {
             Type entityType = Util.GetTypeFromAllAssemblies(e.Name);
 
             object[] arguments = new object[2];
@@ -246,7 +246,7 @@ namespace Otter {
         /// </summary>
         /// <param name="data">The level data to load.</param>
         /// <param name="scene">The Scene to load into.</param>
-        public void LoadLevel(string data, Scene scene) {
+        virtual public void LoadLevel(string data, Scene scene) {
             Entities.Clear();
 
             CurrentLevel = data;
@@ -259,20 +259,24 @@ namespace Otter {
             scene.Width = int.Parse(xmlDoc["level"].Attributes["width"].Value);
             scene.Height = int.Parse(xmlDoc["level"].Attributes["height"].Value);
 
-            int i = 0;
+            int index = 0;
 
-            foreach (var layer in Layers.Values) {
-                if (layer.Type == "GridLayerDefinition") {
+            foreach (var layer in Layers.Values)
+            {
+                if (layer.Type == "GridLayerDefinition")
+                {
                     var Entity = new Entity();
 
                     var grid = new GridCollider(scene.Width, scene.Height, layer.GridWidth, layer.GridHeight);
 
                     grid.LoadString(xmlLevel[layer.Name].InnerText);
-                    if (ColliderTags.ContainsKey(layer.Name)) {
+                    if (ColliderTags.ContainsKey(layer.Name))
+                    {
                         grid.AddTag(ColliderTags[layer.Name]);
                     }
 
-                    if (DisplayGrids) {
+                    if (DisplayGrids)
+                    {
                         var tilemap = new Tilemap(scene.Width, scene.Height, layer.GridWidth, layer.GridHeight);
                         tilemap.LoadString(xmlLevel[layer.Name].InnerText, layer.Color);
                         Entity.AddGraphic(tilemap);
@@ -283,7 +287,8 @@ namespace Otter {
                     scene.Add(Entity);
                     Entities.Add(layer.Name, Entity);
                 }
-                if (layer.Type == "TileLayerDefinition") {
+                if (layer.Type == "TileLayerDefinition")
+                {
                     var Entity = new Entity();
 
                     var xmlTiles = xmlLevel[layer.Name];
@@ -292,11 +297,13 @@ namespace Otter {
 
                     var tilepath = ImagePath + TileMaps[tileset];
 
-                    foreach(var kv in assetMappings) {
+                    foreach (var kv in assetMappings)
+                    {
                         var find = kv.Key;
                         var replace = kv.Value;
 
-                        if (tilepath.EndsWith(find)) {
+                        if (tilepath.EndsWith(find))
+                        {
                             tilepath = replace;
                             break;
                         }
@@ -305,12 +312,14 @@ namespace Otter {
                     var tilemap = new Tilemap(tilepath, scene.Width, scene.Height, layer.GridWidth, layer.GridHeight);
 
                     var exportMode = xmlTiles.Attributes["exportMode"].Value;
-                    switch (exportMode) {
+                    switch (exportMode)
+                    {
                         case "CSV":
                             tilemap.LoadCSV(xmlTiles.InnerText);
                             break;
                         case "XMLCoords":
-                            foreach (XmlElement t in xmlTiles) {
+                            foreach (XmlElement t in xmlTiles)
+                            {
                                 tilemap.SetTile(t);
                             }
                             break;
@@ -320,22 +329,23 @@ namespace Otter {
 
                     Entity.AddGraphic(tilemap);
 
-                    Entity.Layer = BaseTileDepth - i * TileDepthIncrement;
-                    i++;
+                    Entity.Layer = BaseTileDepth - index * TileDepthIncrement;
 
                     scene.Add(Entity);
                     Entities.Add(layer.Name, Entity);
                 }
-                if (layer.Type == "EntityLayerDefinition") {
+                if (layer.Type == "EntityLayerDefinition")
+                {
                     var xmlEntities = xmlLevel[layer.Name];
 
-                    if (xmlEntities != null) {
-                        foreach (XmlElement e in xmlEntities) {
+                    if (xmlEntities != null)
+                    {
+                        foreach (XmlElement e in xmlEntities)
+                        {
                             CreateEntity(e, scene);
                         }
                     }
                 }
-
             }
 
             if (UseCameraBounds) {

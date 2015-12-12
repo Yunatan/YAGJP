@@ -16,6 +16,7 @@ namespace YAGJP.Main
         internal GameWindow() : base(windowTitle, width, height)
         {
             WindowResize = false;
+            Color = Color.Black;
         }
     }
 }

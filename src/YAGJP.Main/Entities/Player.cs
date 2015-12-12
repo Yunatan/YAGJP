@@ -4,16 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using YAGJP.Core;
 
 namespace YAGJP.Main.Entities
 {
-    class PlayerEntity : Entity
+    class Player : Entity
     {
         //Player player;
         Image img = Image.CreateRectangle(32, 32, Color.Red);
 
-        public PlayerEntity(float x, float y) : base(x, y)
+        public Player(float x, float y) : base(x, y)
         {
             //this.player = player;
             AddGraphic(img);

@@ -91,7 +91,7 @@
   <Tilesets>
     <Tileset>
       <Name>walls</Name>
-      <FilePath>bricktile9.png</FilePath>
+      <FilePath>Resources\Levels\bricktile9.png</FilePath>
       <TileSize>
         <Width>16</Width>
         <Height>16</Height>
