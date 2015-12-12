@@ -56,6 +56,9 @@
     <None Include="levels.oep">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="lvl1_sized.oel">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\App.config" />
     <None Include="Resources\Levels\lvl1.oel">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -18,7 +18,7 @@ namespace YAGJP.Main
 
 
             // The path to the level to be loaded.
-            var pathLevel = @"Resources\Levels\testLVL.oel";
+            var pathLevel = @"lvl1_sized.oel";
             // The path to the Ogmo Project to use when loading the level.
             var pathProject = @"levels.oep";
 
@@ -33,10 +33,10 @@ namespace YAGJP.Main
             // Load the level into the Scene.
             proj.LoadLevelFromFile(pathLevel, this);
 
-            var player = new Player(1500, 1500);
+            var player = new Player(600, 600);
             this.Add(player);
 
-            var obj = new Entity(1500, 1500, Image.CreateRectangle(32, 32, Color.Blue));
+            var obj = new Entity(600, 600, Image.CreateRectangle(32, 32, Color.Blue));
             this.Add(obj);
         }
 
