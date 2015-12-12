@@ -5,8 +5,8 @@
   <BackgroundColor A="255" R="63" G="63" B="63" />
   <GridColor A="255" R="212" G="212" B="212" />
   <LevelDefaultSize>
-    <Width>640</Width>
-    <Height>480</Height>
+    <Width>1200</Width>
+    <Height>1200</Height>
   </LevelDefaultSize>
   <LevelMinimumSize>
     <Width>100</Width>
@@ -23,7 +23,7 @@
     <Width>1200</Width>
     <Height>1200</Height>
   </CameraSize>
-  <ExportCameraPosition>false</ExportCameraPosition>
+  <ExportCameraPosition>true</ExportCameraPosition>
   <LevelValueDefinitions />
   <LayerDefinitions>
     <LayerDefinition xsi:type="GridLayerDefinition">
