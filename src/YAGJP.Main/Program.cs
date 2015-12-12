@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Otter;
 
 namespace YAGJP.Main
 {
@@ -11,6 +7,9 @@ namespace YAGJP.Main
         static void Main(string[] args)
         {
             var game = new GameWindow();
+            game.FirstScene = new ActionScene();
+            // Set the background color to see stuff a little better.
+            game.Color = Color.Cyan;
             game.Start();
         }
     }

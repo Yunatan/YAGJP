@@ -10,12 +10,12 @@ namespace YAGJP.Main
     class GameWindow : Game
     {
         const string windowTitle = "YAGJP";
-        const int width = 640;
-        const int height = 480;
+        const int width = 960;
+        const int height = 600;
 
-        public GameWindow() : base(windowTitle, width, height)
+        internal GameWindow() : base(windowTitle, width, height)
         {
-            
+            WindowResize = false;
         }
     }
 }

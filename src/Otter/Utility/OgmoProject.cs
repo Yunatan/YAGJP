@@ -350,7 +350,7 @@ namespace Otter {
         /// <param name="path">The oel to load.</param>
         /// <param name="scene">The Scene to load into.</param>
         public void LoadLevelFromFile(string path, Scene scene) {
-            LoadLevel(File.ReadAllText(path), scene);
+                LoadLevel(File.ReadAllText(path), scene);
         }
 
         /// <summary>
