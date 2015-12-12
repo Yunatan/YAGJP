@@ -100,7 +100,7 @@
     </Tileset>
     <Tileset>
       <Name>walls2</Name>
-      <FilePath>..\Images\w1.png</FilePath>
+      <FilePath>Resources\Images\w1.png</FilePath>
       <TileSize>
         <Width>16</Width>
         <Height>16</Height>
@@ -109,7 +109,7 @@
     </Tileset>
     <Tileset>
       <Name>walls3</Name>
-      <FilePath>..\Images\w2.png</FilePath>
+      <FilePath>Resources\Images\w2.png</FilePath>
       <TileSize>
         <Width>16</Width>
         <Height>16</Height>
@@ -127,7 +127,7 @@
         <X>0</X>
         <Y>0</Y>
       </Origin>
-      <ImageDefinition DrawMode="Image" ImagePath="..\Images\gg2.png" Tiled="false">
+      <ImageDefinition DrawMode="Image" ImagePath="Resources\Images\gg2.png" Tiled="false">
         <RectColor A="255" R="255" G="0" B="0" />
       </ImageDefinition>
       <ValueDefinitions />
