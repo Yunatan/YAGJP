@@ -18,7 +18,7 @@
   </LevelMaximumSize>
   <Filename>E:\LUDUM_OFF\YAGJP\src\YAGJP.Main\levels.oep</Filename>
   <AngleMode>Radians</AngleMode>
-  <CameraEnabled>true</CameraEnabled>
+  <CameraEnabled>false</CameraEnabled>
   <CameraSize>
     <Width>600</Width>
     <Height>600</Height>
