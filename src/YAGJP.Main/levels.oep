@@ -52,8 +52,8 @@
       <Color A="255" R="192" G="192" B="192" />
       <ExportMode>Bitstring</ExportMode>
     </LayerDefinition>
-    <LayerDefinition xsi:type="EntityLayerDefinition">
-      <Name>objects_1</Name>
+    <LayerDefinition xsi:type="TileLayerDefinition">
+      <Name>floor_1</Name>
       <Grid>
         <Width>16</Width>
         <Height>16</Height>
@@ -62,6 +62,19 @@
         <X>1</X>
         <Y>1</Y>
       </ScrollFactor>
+      <ExportMode>CSV</ExportMode>
+    </LayerDefinition>
+    <LayerDefinition xsi:type="TileLayerDefinition">
+      <Name>floor_2</Name>
+      <Grid>
+        <Width>16</Width>
+        <Height>16</Height>
+      </Grid>
+      <ScrollFactor>
+        <X>1</X>
+        <Y>1</Y>
+      </ScrollFactor>
+      <ExportMode>CSV</ExportMode>
     </LayerDefinition>
     <LayerDefinition xsi:type="TileLayerDefinition">
       <Name>walls_1</Name>
@@ -86,6 +99,17 @@
         <Y>1</Y>
       </ScrollFactor>
       <ExportMode>CSV</ExportMode>
+    </LayerDefinition>
+    <LayerDefinition xsi:type="EntityLayerDefinition">
+      <Name>objects_1</Name>
+      <Grid>
+        <Width>16</Width>
+        <Height>16</Height>
+      </Grid>
+      <ScrollFactor>
+        <X>1</X>
+        <Y>1</Y>
+      </ScrollFactor>
     </LayerDefinition>
   </LayerDefinitions>
   <Tilesets>
