@@ -66,8 +66,8 @@
     <LayerDefinition xsi:type="TileLayerDefinition">
       <Name>walls_1</Name>
       <Grid>
-        <Width>32</Width>
-        <Height>32</Height>
+        <Width>16</Width>
+        <Height>16</Height>
       </Grid>
       <ScrollFactor>
         <X>1</X>
@@ -78,8 +78,8 @@
     <LayerDefinition xsi:type="TileLayerDefinition">
       <Name>walls_2</Name>
       <Grid>
-        <Width>32</Width>
-        <Height>32</Height>
+        <Width>16</Width>
+        <Height>16</Height>
       </Grid>
       <ScrollFactor>
         <X>1</X>
