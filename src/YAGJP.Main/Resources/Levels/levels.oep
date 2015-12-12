@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <OgmoVersion>2.1.0.6</OgmoVersion>
+  <OgmoVersion>1.0</OgmoVersion>
   <Name>levels</Name>
   <BackgroundColor A="255" R="63" G="63" B="63" />
   <GridColor A="255" R="212" G="212" B="212" />
@@ -29,8 +29,8 @@
     <LayerDefinition xsi:type="GridLayerDefinition">
       <Name>grid_1</Name>
       <Grid>
-        <Width>32</Width>
-        <Height>32</Height>
+        <Width>16</Width>
+        <Height>16</Height>
       </Grid>
       <ScrollFactor>
         <X>1</X>
@@ -42,8 +42,8 @@
     <LayerDefinition xsi:type="GridLayerDefinition">
       <Name>grid_2</Name>
       <Grid>
-        <Width>32</Width>
-        <Height>32</Height>
+        <Width>16</Width>
+        <Height>16</Height>
       </Grid>
       <ScrollFactor>
         <X>1</X>
@@ -53,7 +53,7 @@
       <ExportMode>Bitstring</ExportMode>
     </LayerDefinition>
     <LayerDefinition xsi:type="EntityLayerDefinition">
-      <Name>objects</Name>
+      <Name>objects_1</Name>
       <Grid>
         <Width>16</Width>
         <Height>16</Height>
@@ -64,10 +64,10 @@
       </ScrollFactor>
     </LayerDefinition>
     <LayerDefinition xsi:type="TileLayerDefinition">
-      <Name>walls1</Name>
+      <Name>walls_1</Name>
       <Grid>
-        <Width>16</Width>
-        <Height>16</Height>
+        <Width>32</Width>
+        <Height>32</Height>
       </Grid>
       <ScrollFactor>
         <X>1</X>
@@ -76,10 +76,10 @@
       <ExportMode>CSV</ExportMode>
     </LayerDefinition>
     <LayerDefinition xsi:type="TileLayerDefinition">
-      <Name>walls2</Name>
+      <Name>walls_2</Name>
       <Grid>
-        <Width>16</Width>
-        <Height>16</Height>
+        <Width>32</Width>
+        <Height>32</Height>
       </Grid>
       <ScrollFactor>
         <X>1</X>
@@ -91,25 +91,7 @@
   <Tilesets>
     <Tileset>
       <Name>walls</Name>
-      <FilePath>bricktile.png</FilePath>
-      <TileSize>
-        <Width>16</Width>
-        <Height>16</Height>
-      </TileSize>
-      <TileSep>0</TileSep>
-    </Tileset>
-    <Tileset>
-      <Name>walls2</Name>
-      <FilePath>..\Images\w1.png</FilePath>
-      <TileSize>
-        <Width>16</Width>
-        <Height>16</Height>
-      </TileSize>
-      <TileSep>0</TileSep>
-    </Tileset>
-    <Tileset>
-      <Name>walls3</Name>
-      <FilePath>..\Images\w2.png</FilePath>
+      <FilePath>bricktile9.png</FilePath>
       <TileSize>
         <Width>16</Width>
         <Height>16</Height>
