@@ -9,7 +9,7 @@ namespace YAGJP.Main.Entities
 {
     class Player : Entity
     {
-        BoxCollider collider = new BoxCollider(32, 32, Tags.Player);
+        BoxCollider collider = new BoxCollider(30, 30, Tags.Player);
         Image img = new Image(@"Resources\Levels\gg2.png");
 
         public Player(float x, float y) : base(x, y)
@@ -51,10 +51,9 @@ namespace YAGJP.Main.Entities
             if (Input.KeyDown(Key.A))
             {
                 // Move left by the move speed.
-                X -= MoveSpeed;
-                if (Hitbox.Collide(X, Y, Tags.Solid) != null)
+                if (collider.Collide(X, Y, Tags.Solid) == null)
                 {
-                    X += MoveSpeed;
+                    X -= MoveSpeed;
                 }
             }
             // If the D key is down,

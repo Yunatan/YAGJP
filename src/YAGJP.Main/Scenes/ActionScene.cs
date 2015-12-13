@@ -17,25 +17,29 @@ namespace YAGJP.Main
         {
 
 
-            // The path to the level to be loaded.
-            var pathLevel = @"lvl1_sized.oel";
-            // The path to the Ogmo Project to use when loading the level.
-            var pathProject = @"levels.oep";
+            //// The path to the level to be loaded.
+            //var pathLevel = @"lvl1_sized.oel";
+            //// The path to the Ogmo Project to use when loading the level.
+            //var pathProject = @"levels.oep";
 
-            // Create a new OgmoProject using the .oep file.
-            proj = new OgmoProject(pathProject);
+            //// Create a new OgmoProject using the .oep file.
+            //proj = new OgmoProject(pathProject);
 
-            //Ensure that the grid layer named "Solids" gets the Solid collision tag when loading.
-            proj.RegisterTag(Tags.Solid, "grid_1");
-            proj.RegisterTag(Tags.Solid, "grid_2");
+            ////Ensure that the grid layer named "Solids" gets the Solid collision tag when loading.
+            //proj.RegisterTag(Tags.Solid, "grid_1");
+            //proj.RegisterTag(Tags.Solid, "grid_2");
 
-            // Load the level into the Scene.
-            proj.LoadLevelFromFile(pathLevel, this);
+            //// Load the level into the Scene.
+            //proj.LoadLevelFromFile(pathLevel, this);
 
             var player = new Player(600, 600);
             this.Add(player);
 
-            var obj = new Entity(600, 600, Image.CreateRectangle(32, 32, Color.Blue));
+            var obj = new Entity(600, 700, Image.CreateRectangle(32, 32, Color.Blue));
+            obj.Graphic.CenterOrigin();
+            BoxCollider collider = new BoxCollider(32, 32, Tags.Solid);
+            collider.CenterOrigin();
+            obj.AddCollider(collider);
             this.Add(obj);
         }
 
